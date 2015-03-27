@@ -24,8 +24,8 @@
  */
 package org.spongepowered.api.block.tile.carrier;
 
-import org.spongepowered.api.block.tile.TileDataTransactionResult;
-import org.spongepowered.api.block.tile.data.BrewingData;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.data.manipulators.BrewingData;
 
 /**
  * Represents a Brewing Stand.
@@ -34,7 +34,7 @@ public interface BrewingStand extends TileEntityCarrier {
 
     /**
      /**
-     * Gets the current {@link BrewingData} of this {@link BrewingStand}.
+     * Gets a copy of the current {@link BrewingData}.
      *
      * <p>Note that as time goes on, the {@link BrewingData} may not remain in
      * sync with the {@link BrewingStand} tile entity. It is advisable that a
@@ -54,5 +54,5 @@ public interface BrewingStand extends TileEntityCarrier {
      * @param data The brewing data to set
      * @return The transaction result
      */
-    TileDataTransactionResult setBrewingData(BrewingData data);
+    DataTransactionResult setBrewingData(BrewingData data);
 }

@@ -35,8 +35,14 @@ import org.spongepowered.api.block.BlockState;
 import org.spongepowered.api.block.BlockType;
 import org.spongepowered.api.block.BlockTypes;
 import org.spongepowered.api.block.ScheduledBlockUpdate;
-import org.spongepowered.api.item.inventory.ItemStack;
-import org.spongepowered.api.service.persistence.data.DataHolder;
+import org.spongepowered.api.data.Property;
+import org.spongepowered.api.data.DataContainer;
+import org.spongepowered.api.data.DataHolder;
+import org.spongepowered.api.data.DataManipulator;
+import org.spongepowered.api.data.DataPriority;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.item.ItemStack;
+import org.spongepowered.api.service.persistence.InvalidDataException;
 import org.spongepowered.api.util.Direction;
 import org.spongepowered.api.world.extent.Extent;
 
@@ -486,11 +492,6 @@ public class Location implements DataHolder {
         return getExtent().getBlockSnapshot(getBlockPosition());
     }
 
-    @Override
-    public <T> Optional<T> getData(Class<T> dataClass) {
-        return getExtent().getBlockData(getBlockPosition(), dataClass);
-    }
-
     /**
      * Gets a list of {@link ScheduledBlockUpdate}s on this block.
      *
@@ -518,6 +519,56 @@ public class Location implements DataHolder {
      */
     void removeScheduledUpdate(ScheduledBlockUpdate update) {
         getExtent().removeScheduledUpdate(getBlockPosition(), update);
+    }
+
+    @Override
+    public <T extends DataManipulator<T>> Optional<T> getData(Class<T> dataClass) {
+        return null;
+    }
+
+    @Override
+    public <T extends DataManipulator<T>> Optional<T> getOrCreate(Class<T> manipulatorClass) {
+        return null;
+    }
+
+    @Override
+    public <T extends DataManipulator<T>> boolean isCompatible(Class<T> manipulatorClass) {
+        return false;
+    }
+
+    @Override
+    public <T extends DataManipulator<T>> DataTransactionResult offer(T manipulatorData) {
+        return null;
+    }
+
+    @Override
+    public <T extends DataManipulator<T>> DataTransactionResult offer(T manipulatorData, DataPriority priority) {
+        return null;
+    }
+
+    @Override
+    public Collection<? extends DataManipulator<?>> getManipulators() {
+        return null;
+    }
+
+    @Override
+    public <T extends Property<?, ?>> Optional<T> getProperty(Class<T> propertyClass) {
+        return null;
+    }
+
+    @Override
+    public Collection<? extends Property<?, ?>> getProperties() {
+        return null;
+    }
+
+    @Override
+    public boolean validateRawData(DataContainer container) {
+        return false;
+    }
+
+    @Override
+    public void setRawData(DataContainer container) throws InvalidDataException {
+
     }
 
 }

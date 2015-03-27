@@ -27,7 +27,7 @@ package org.spongepowered.api.event.block.tile;
 import com.google.common.base.Optional;
 import org.spongepowered.api.block.tile.carrier.Furnace;
 import org.spongepowered.api.event.inventory.ItemResultEvent;
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.item.ItemStack;
 
 /**
  * An event when a {@link Furnace} consumes an {@link ItemStack} as fuel.

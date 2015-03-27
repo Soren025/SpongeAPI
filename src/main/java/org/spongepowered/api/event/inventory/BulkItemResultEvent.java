@@ -24,7 +24,7 @@
  */
 package org.spongepowered.api.event.inventory;
 
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.item.ItemStack;
 
 import java.util.List;
 

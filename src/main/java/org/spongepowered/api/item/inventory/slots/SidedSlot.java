@@ -24,7 +24,7 @@
  */
 package org.spongepowered.api.item.inventory.slots;
 
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.item.ItemStack;
 import org.spongepowered.api.item.inventory.Slot;
 import org.spongepowered.api.util.Direction;
 

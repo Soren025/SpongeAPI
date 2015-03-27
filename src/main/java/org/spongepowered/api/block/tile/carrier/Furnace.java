@@ -24,8 +24,8 @@
  */
 package org.spongepowered.api.block.tile.carrier;
 
-import org.spongepowered.api.block.tile.TileDataTransactionResult;
-import org.spongepowered.api.block.tile.data.FurnaceData;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.data.manipulators.FurnaceData;
 
 /**
  * Represents a Furnace.
@@ -33,7 +33,7 @@ import org.spongepowered.api.block.tile.data.FurnaceData;
 public interface Furnace extends TileEntityCarrier {
 
     /**
-     * Gets the current {@link FurnaceData} of this furnace.
+     * Gets a copy of the current {@link FurnaceData}.
      *
      * <p>Note that as time goes on, the {@link FurnaceData} may not remain in
      * sync with the {@link Furnace} tile entity. It is advisable that a
@@ -53,6 +53,6 @@ public interface Furnace extends TileEntityCarrier {
      * @param data The furnace data to set
      * @return The transaction result
      */
-    TileDataTransactionResult setFurnaceData(FurnaceData data);
+    DataTransactionResult setFurnaceData(FurnaceData data);
 
 }

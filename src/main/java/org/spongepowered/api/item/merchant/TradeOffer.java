@@ -25,7 +25,7 @@
 package org.spongepowered.api.item.merchant;
 
 import com.google.common.base.Optional;
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.item.ItemStack;
 
 /**
  * <p>Represents a trade offer that a {@link Merchant} may offer a

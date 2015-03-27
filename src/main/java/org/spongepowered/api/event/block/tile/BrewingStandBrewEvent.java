@@ -26,7 +26,7 @@ package org.spongepowered.api.event.block.tile;
 
 import org.spongepowered.api.block.tile.carrier.BrewingStand;
 import org.spongepowered.api.event.inventory.BulkItemResultEvent;
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.item.ItemStack;
 
 import java.util.List;
 

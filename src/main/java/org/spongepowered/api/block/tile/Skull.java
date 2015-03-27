@@ -25,7 +25,8 @@
 
 package org.spongepowered.api.block.tile;
 
-import org.spongepowered.api.block.tile.data.SkullData;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.data.manipulators.SkullData;
 
 /**
  * Represents a skull.
@@ -33,7 +34,7 @@ import org.spongepowered.api.block.tile.data.SkullData;
 public interface Skull extends TileEntity {
 
     /**
-     * Gets the data that this {@link Skull} is currently using.
+     * Gets a copy of the current {@link SkullData}.
      *
      * @return The current skull data
      */
@@ -48,5 +49,5 @@ public interface Skull extends TileEntity {
      * @param data The skull data to set
      * @return The transaction result
      */
-    TileDataTransactionResult setSkullData(SkullData data);
+    DataTransactionResult setSkullData(SkullData data);
 }

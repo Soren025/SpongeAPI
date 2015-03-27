@@ -25,7 +25,8 @@
 
 package org.spongepowered.api.block.tile;
 
-import org.spongepowered.api.block.tile.data.SignData;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.data.manipulators.SignData;
 
 /**
  * Represents a sign.
@@ -33,7 +34,7 @@ import org.spongepowered.api.block.tile.data.SignData;
 public interface Sign extends TileEntity {
 
     /**
-     * Gets the data that this {@link Sign} is currently using.
+     * Gets a copy of the current {@link SignData}.
      *
      * @return The current sign data
      */
@@ -48,5 +49,5 @@ public interface Sign extends TileEntity {
      * @param data The sign data to set
      * @return The transaction result
      */
-    TileDataTransactionResult setSignData(SignData data);
+    DataTransactionResult setSignData(SignData data);
 }

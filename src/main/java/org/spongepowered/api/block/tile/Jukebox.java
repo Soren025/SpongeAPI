@@ -24,8 +24,9 @@
  */
 package org.spongepowered.api.block.tile;
 
-import org.spongepowered.api.block.tile.data.JukeboxData;
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.data.manipulators.JukeboxData;
+import org.spongepowered.api.item.ItemStack;
 
 /**
  * Represents a jukebox, also know as a record player.
@@ -51,7 +52,7 @@ public interface Jukebox extends TileEntity {
     void insertRecord(ItemStack record);
 
     /**
-     * Gets the associated {@link JukeboxData} for this {@link Jukebox}.
+     * Gets a copy of the current {@link JukeboxData}.
      *
      * @return The current associated juke box data
      */
@@ -66,6 +67,6 @@ public interface Jukebox extends TileEntity {
      * @param data The jukebox data to set
      * @return The transaction result
      */
-    TileDataTransactionResult setJukeboxData(JukeboxData data);
+    DataTransactionResult setJukeboxData(JukeboxData data);
 
 }

@@ -25,7 +25,7 @@
 package org.spongepowered.api.event.inventory;
 
 import com.google.common.base.Optional;
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.item.ItemStack;
 
 /**
  * Fired when some inventory event causes a single result item.

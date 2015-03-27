@@ -25,7 +25,8 @@
 
 package org.spongepowered.api.block.tile;
 
-import org.spongepowered.api.block.tile.data.MobSpawnerData;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.data.manipulators.MobSpawnerData;
 
 /**
  * Represents a Monster Spawner.
@@ -43,7 +44,7 @@ public interface MobSpawner extends TileEntity {
     void spawnEntityBatchImmediately(boolean force);
 
     /**
-     * Gets the data that this {@link MobSpawner} is currently using.
+     * Gets a copy of the current {@link MobSpawnerData}.
      *
      * @return The current spawner data
      */
@@ -58,5 +59,5 @@ public interface MobSpawner extends TileEntity {
      * @param data The mob spawner data to set
      * @return The transaction result
      */
-    TileDataTransactionResult setMobSpawnerData(MobSpawnerData data);
+    DataTransactionResult setMobSpawnerData(MobSpawnerData data);
 }

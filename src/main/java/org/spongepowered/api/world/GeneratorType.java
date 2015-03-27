@@ -25,7 +25,7 @@
 
 package org.spongepowered.api.world;
 
-import org.spongepowered.api.service.persistence.data.DataContainer;
+import org.spongepowered.api.data.DataContainer;
 import org.spongepowered.api.world.gen.WorldGenerator;
 
 /**

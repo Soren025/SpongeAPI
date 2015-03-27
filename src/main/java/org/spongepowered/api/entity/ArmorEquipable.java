@@ -1,5 +1,3 @@
-package org.spongepowered.api.entity;
-
 /*
  * This file is part of Sponge, licensed under the MIT License (MIT).
  *
@@ -24,9 +22,10 @@ package org.spongepowered.api.entity;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+package org.spongepowered.api.entity;
 
 import com.google.common.base.Optional;
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.item.ItemStack;
 
 import javax.annotation.Nullable;
 

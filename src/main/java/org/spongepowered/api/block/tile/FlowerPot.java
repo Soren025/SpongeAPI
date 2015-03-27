@@ -24,7 +24,8 @@
  */
 package org.spongepowered.api.block.tile;
 
-import org.spongepowered.api.block.tile.data.FlowerPotData;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.data.manipulators.FlowerPotData;
 
 /**
  * Represents a flower pot.
@@ -32,7 +33,7 @@ import org.spongepowered.api.block.tile.data.FlowerPotData;
 public interface FlowerPot extends TileEntity {
 
     /**
-     * Gets the data that this {@link FlowerPot} is currently using.
+     * Gets a copy of the current {@link FlowerPotData}.
      *
      * @return The current flower pot data
      */
@@ -47,6 +48,6 @@ public interface FlowerPot extends TileEntity {
      * @param data The flower pot data to set
      * @return The transaction result
      */
-    TileDataTransactionResult setFlowerPotData(FlowerPotData data);
+    DataTransactionResult setFlowerPotData(FlowerPotData data);
 
 }

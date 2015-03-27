@@ -24,7 +24,8 @@
  */
 package org.spongepowered.api.block.tile;
 
-import org.spongepowered.api.block.tile.data.BannerData;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.data.manipulators.BannerData;
 
 /**
  * Represents a Banner {@link TileEntity}.
@@ -32,7 +33,7 @@ import org.spongepowered.api.block.tile.data.BannerData;
 public interface Banner extends TileEntity {
 
     /**
-     * Gets the data that this {@link Banner} is displaying.
+     * Gets a copy of the current {@link BannerData}.
      *
      * @return The current banner data
      */
@@ -47,5 +48,5 @@ public interface Banner extends TileEntity {
      * @param data The banner data to set
      * @return The transaction result
      */
-    TileDataTransactionResult setBannerData(BannerData data);
+    DataTransactionResult setBannerData(BannerData data);
 }

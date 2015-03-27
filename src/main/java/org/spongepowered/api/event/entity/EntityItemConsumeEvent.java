@@ -24,7 +24,7 @@
  */
 package org.spongepowered.api.event.entity;
 
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.item.ItemStack;
 import org.spongepowered.api.util.event.Cancellable;
 
 /**

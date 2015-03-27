@@ -24,8 +24,8 @@
  */
 package org.spongepowered.api.block.tile.carrier;
 
-import org.spongepowered.api.block.tile.TileDataTransactionResult;
-import org.spongepowered.api.block.tile.data.BeaconData;
+import org.spongepowered.api.data.DataTransactionResult;
+import org.spongepowered.api.data.manipulators.BeaconData;
 
 /**
  * Represents a Beacon.
@@ -45,7 +45,7 @@ public interface Beacon extends TileEntityCarrier {
     int getCompletedLevels();
 
     /**
-     * Gets the currently associated {@link BeaconData}.
+     * Gets a copy of the current {@link BeaconData}.
      *
      * @return The currently associated beacon data
      */
@@ -60,6 +60,6 @@ public interface Beacon extends TileEntityCarrier {
      * @param data The beacon data to set
      * @return The transaction result
      */
-    TileDataTransactionResult setBeaconData(BeaconData data);
+    DataTransactionResult setBeaconData(BeaconData data);
 
 }

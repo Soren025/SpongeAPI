@@ -27,7 +27,7 @@ package org.spongepowered.api.event.entity.living.human.fishing;
 import com.google.common.base.Optional;
 import org.spongepowered.api.entity.Entity;
 import org.spongepowered.api.event.ExperienceEvent;
-import org.spongepowered.api.item.inventory.ItemStack;
+import org.spongepowered.api.item.ItemStack;
 
 import javax.annotation.Nullable;
 
