@@ -25,26 +25,28 @@
 
 package org.spongepowered.api.world.gen;
 
-import org.spongepowered.api.util.gen.BiomeBuffer;
 import org.spongepowered.api.util.gen.MutableBlockBuffer;
+import org.spongepowered.api.world.biome.BiomeType;
 
 /**
  * A populator which acts directly on the {@link MutableBlockBuffer} during the
- * generation phase rather than the population phase.
- * 
- * <p>Unlike a normal {@link Populator}, a {@link GeneratorPopulator} is
- * restricted to the chunk that is currently being generated.</p>
+ * generation phase rather than the population phase. Similar to the
+ * GeneratorPopulator however the ColumnPopulator only acts upon a single 1x1
+ * column of the chunk.
  */
-public interface GeneratorPopulator {
+public interface ColumnPopulator {
 
     /**
-     * Operates on a {@link MutableBlockBuffer} either forming the base terrain
-     * or performing modifications during the generation phase.
+     * Operates on a single 1x1 column of the given {@link MutableBlockBuffer}.
+     * The given x,z position is the location of the column relative to the
+     * buffer.
      *
      * @param buffer The buffer to apply the changes to. The buffer can be of
      *            any size.
-     * @param biomes The biomes for generation
+     * @param biome The biome of the targeted column
+     * @param x The X position of the column, relative to the buffer
+     * @param z The Z position of the column, relative to the buffer
      */
-    void populate(MutableBlockBuffer buffer, BiomeBuffer biomes);
+    void populate(MutableBlockBuffer buffer, BiomeType biome, int x, int z);
 
 }

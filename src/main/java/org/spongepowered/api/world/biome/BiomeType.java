@@ -26,6 +26,8 @@
 package org.spongepowered.api.world.biome;
 
 import org.spongepowered.api.util.annotation.CatalogedBy;
+import org.spongepowered.api.world.gen.ColumnPopulator;
+import org.spongepowered.api.world.gen.GeneratorPopulator;
 import org.spongepowered.api.world.gen.Populator;
 
 import java.util.List;
@@ -72,8 +74,27 @@ public interface BiomeType {
     float getMaxHeight();
 
     /**
-     * Returns a mutable list of {@link Populator}s specific to this
-     * biome. Changing this list will affect population of all new chunks.
+     * Gets the {@link ColumnPopulator} for this biome. The column populator
+     * replaces the base terrain
+     * 
+     * @return The column populator
+     */
+    ColumnPopulator getColumnPopulator();
+
+    /**
+     * Gets a mutable list of {@link GeneratorPopulator}s. These populators work
+     * strictly on a single chunk. They will be executed directly after the
+     * {@link #getColumnPopulator() column populator} is called. These generator
+     * populators are typically used to generate large terrain features, like
+     * caves and ravines.
+     *
+     * @return The generator populators
+     */
+    List<GeneratorPopulator> getGeneratorPopulators();
+
+    /**
+     * Returns a mutable list of {@link Populator}s specific to this biome.
+     * Changing this list will affect population of all new chunks.
      *
      * @return The populators
      */
